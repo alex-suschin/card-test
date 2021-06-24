@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Карточка товара', 'description': 'Описание Карточки товара', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper">
+        @@include('components/page/_2_header.html')
+
+        <div class="card-box">
+            <div class="card-box-top">
+                <div class="card-box-top__left">
+                    <div class="card-imgs">
+                        <div class="card-img-big">
+                            <img src="img/HTB1IfykacnrK1RjSspkq6yuvXXaF.jpg" alt="">
+                        </div>
+                        <div class="card-img-small">
+                            <div class="card-img-small-item active">
+                                <img src="img/HTB1GfOcadfvK1RjSspoq6zfNpXa6.jpg" alt="">
+                            </div>
+                            <div class="card-img-small-item">
+                                <img src="img/HTB1IfykacnrK1RjSspkq6yuvXXaF.jpg" alt="">
+                            </div>
+                            <div class="card-img-small-item">
+                                <img src="img/HTB1iKmfacvrK1Rjy0Feq6ATmVXah.jpg" alt="">
+                            </div>
+                            <div class="card-img-small-item">
+                                <img src="img/HTB1PemfacvrK1Rjy0Feq6ATmVXai.jpg" alt="">
+                            </div>
+                            <div class="card-img-small-item">
+                                <img src="img/HTB1WTuiajDuK1RjSszdq6xGLpXav.jpg" alt="">
+                            </div>
+                            <div class="card-img-small-item">
+                                <img src="img/HTB11FufacfrK1RjSszcq6xGGFXaf.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-box-top__right">
+                    <div class="card-info">
+                        <div class="card-info__left">
+                            <div class="card-price">
+                                <div class="old-price">3 700 ₽</div>
+                                <div class="new-price">2 290 ₽</div>
+                                <div class="save-money">1 100 ₽ <span>экономии</span></div>
+                            </div>
+                            <div class="card-sale">-<i>23</i>%</div>
+                        </div>
+                        <div class="card-info__right">
+                            <div class="code">Код товара: <input type="text" readonly value="15112"></div>
+                            <div class="availability"><i><img src="img/galka.png" alt=""></i> На складе много</div>
+                            <div class="sale-down">Нашли дешевле? <a href="#">Снизим цену!</a></div>
+                        </div>
+                    </div>
+
+                    <form action="/" class="form-order" method="POST">
+                        <div class="card-size">
+                            <div class="title">Выберите размер </div>
+                            <div class="size-radio-items">
+                                <div class="size-radio-item active">
+                                    <label for="size1"><input id="size1" name="size" type="radio" checked><span>S</span></label>
+                                </div>
+                                <div class="size-radio-item">
+                                    <label for="size2"><input id="size2" name="size" type="radio"><span>M</span></label>
+                                </div>
+                                <div class="size-radio-item">
+                                    <label for="size3"><input id="size3" name="size" type="radio"><span>L</span></label>
+                                </div>
+                                <div class="size-radio-item disable">
+                                    <label for="size4"><input id="size4" disable name="size" type="radio"><span>XL</span></label>
+                                </div>
+                                <div class="size-radio-item disable">
+                                    <label for="size5"><input id="size5" disable name="size" type="radio"><span>XXL</span></label>
+                                </div>
+                                <a href="#" class="switch-size">
+                                Подобрать<br> оптимальный размер
+                            </a>
+                            </div>
+                        </div>
+
+                        <div class="col-product">
+                            <div class="quantity"><input type="number" value="1" min="1" max="6"></div>
+                            <button class="btn-order" type="submit"><span>В корзину</span></button>
+                        </div>
+
+                    </form>
+
+                    <form action="/" class="form-quick-order" method="POST">
+                        <div class="title">Быстрый заказ</div>
+                        <div class="desc">Вы можете на заполнять никаких форм, просто оставьте свой телефон<br> и наш менеджер свяжется с вами</div>
+                        <div class="quick-order-box">
+                            <input type="tel" placeholder="+7   ___-___-__-__">
+                            <button type="submit">Заказать в один клик</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="card-box-bottom">
+                <div class="card-box-bottom__left">
+                    <div class="region">
+                        <span>Регион доставки:</span>
+                        <select name="" id="">
+                            <option value="Краснодар">Краснодар</option>
+                            <option value="Воронеж">Воронеж</option>
+                            <option value="Москва">Москва</option>
+                        </select>
+                    </div>
+                    <div class="delivery">
+                        <div class="delivery-table">
+                            <div class="delivery-table-item">
+                                <a href="#">Пункты самовывоза</a>
+                                <span>2 дня</span>
+                                <b>165 ₽</b>
+                            </div>
+                            <div class="delivery-table-item">
+                                <i>Курьером</i>
+                                <span>2 дня</span>
+                                <b>305 ₽</b>
+                            </div>
+                            <div class="delivery-table-item">
+                                <i>Почта России</i>
+                                <span>5-14 дней</span>
+                                <b>250 ₽</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <div>
+                            <img src="img/кошелек.svg" alt="">
+                            <span>Оплата после<br>
+                                проверки</span>
+                        </div>
+                        <div>
+                            <img src="img/календарь.svg" alt="">
+                            <span>14 дней<br>
+                                на возврат</span>
+                        </div>
+                    </div>
+                    <div class="callback">
+                        <span>Есть вопросы?
+                            Звоните!</span>
+                        <div>
+                            <a class="tel" href="tel:84951059818">8 (495) 105-98-18</a>
+                            <a class="btn-callback" href="#">Заказать обратный звонок</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-box-bottom__right">
+                    <div class="desc-product-btns">
+                        <a href="javascript:void(0);" data-switch="tab-1" class="active">Описание</a>
+                        <a href="javascript:void(0);" data-switch="tab-2">Характеристики</a>
+                    </div>
+
+                    <div class="desc-product-elems">
+                        <div class="desc-product-elem" id="tab-1">
+                            <p>Помните веселого персонажа из мультфильма про кунг-фу? Энергичный, немного глуповатый и малость невезучий, По доказал каждому, что его возможности безграничны. Пожалуй, эта панда – настоящий символ настойчивости и упорства.
+                                Мы предлагаем вам облачиться в нежную черно-белую шерстку, которая так и просит «обними меня!».</p>
+
+                            <p> Костюм мастера кунг-фу изготовлен из велсофта. Это позволяет коже дышать и не потеть, даже если вам предстоит веселить своих друзей весь день. Пижама застегивается на пуговички и плотно прилегает к рукам и ногам в области манжетов.
+                                Голову прикрывает яркая мордочка с ушками, которая завершает образ.</p>
+
+                            <p>Панды – ленивые создания, но очень притягательные. Вам будет сложно отказать в объятиях. Почему бы не воспользоваться этой особенностью с пользой для себя? В таком костюме не важно, где именно будет ваша вечеринка. Главное
+                                то, что никто на ней вас точно не забудет. Покупая у нас, вы экономите в сравнении с конкурентами и получаете дешевую доставку «до двери». Торопитесь заказать пижаму «Кунг-фу Панда»!</p>
+                        </div>
+                        <div class="desc-product-elem" id="tab-2" style="display: none;">
+                            <div class="chars">
+                                <div class="chars-item">
+                                    <span>Материал</span>
+                                    <b>Велсофт</b>
+                                </div>
+                                <div class="chars-item">
+                                    <span>Цвет</span>
+                                    <div class="colors">
+                                        <div class="white"></div>
+                                        <div class="red"></div>
+                                        <div class="black"></div>
+                                    </div>
+                                </div>
+                                <div class="chars-item">
+                                    <span>Для кого</span>
+                                    <b>Унисекс</b>
+                                </div>
+                                <div class="chars-item">
+                                    <span>Тапочки в комплекте</span>
+                                    <b>Нет</b>
+                                </div>
+                                <div class="chars-item">
+                                    <span>Уход</span>
+                                    <b>Деликатная стирка</b>
+                                </div>
+                                <div class="chars-item">
+                                    <span>Молния на попе</span>
+                                    <b>Есть</b>
+                                </div>
+                                <div class="chars-item">
+                                    <span>Хвост</span>
+                                    <b>Есть</b>
+                                </div>
+                                <div class="chars-item">
+                                    <span>Тип застежки</span>
+                                    <b>Пуговицы</b>
+                                </div>
+                                <div class="chars-item">
+                                    <span>Карманы</span>
+                                    <b>Нет</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
