@@ -40,14 +40,19 @@
                 <div class="card-box-top__left">
                     <div class="card-imgs">
                         <div class="card-img-big">
-                            <img src="img/HTB1IfykacnrK1RjSspkq6yuvXXaF.jpg" alt="">
+                            <div class="card-img-big-item">
+                                <a class="test-popup-link" href="img/HTB1IfykacnrK1RjSspkq6yuvXXaF.jpg">
+                                    <img src="img/HTB1IfykacnrK1RjSspkq6yuvXXaF.jpg" alt="">
+                                </a>
+                            </div>
+
                         </div>
                         <div class="card-img-small">
                             <div class="card-img-small-item active">
-                                <img src="img/HTB1GfOcadfvK1RjSspoq6zfNpXa6.jpg" alt="">
+                                <img src="img/HTB1IfykacnrK1RjSspkq6yuvXXaF.jpg" alt="">
                             </div>
                             <div class="card-img-small-item">
-                                <img src="img/HTB1IfykacnrK1RjSspkq6yuvXXaF.jpg" alt="">
+                                <img src="img/HTB1GfOcadfvK1RjSspoq6zfNpXa6.jpg" alt="">
                             </div>
                             <div class="card-img-small-item">
                                 <img src="img/HTB1iKmfacvrK1Rjy0Feq6ATmVXah.jpg" alt="">
@@ -68,14 +73,14 @@
                     <div class="card-info">
                         <div class="card-info__left">
                             <div class="card-price">
-                                <div class="old-price">3 700 ₽</div>
-                                <div class="new-price">2 290 ₽</div>
-                                <div class="save-money">1 100 ₽ <span>экономии</span></div>
+                                <div class="old-price"><span>3 700</span> ₽</div>
+                                <div class="new-price"><span>2849</span> ₽</div>
+                                <div class="save-money"><b></b> ₽ <span>экономии</span></div>
                             </div>
                             <div class="card-sale">-<i>23</i>%</div>
                         </div>
                         <div class="card-info__right">
-                            <div class="code">Код товара: <input type="text" readonly value="15112"></div>
+                            <div class="code">Код товара: <input id="idProduct" onclick="copyId()" type="text" readonly value="15112"></div>
                             <div class="availability"><i><img src="img/galka.png" alt=""></i> На складе много</div>
                             <div class="sale-down">Нашли дешевле? <a href="#">Снизим цену!</a></div>
                         </div>
@@ -86,28 +91,28 @@
                             <div class="title">Выберите размер </div>
                             <div class="size-radio-items">
                                 <div class="size-radio-item active">
-                                    <label for="size1"><input id="size1" name="size" type="radio" checked><span>S</span></label>
+                                    <label for="size1"><input class="input-price" id="size1" data-price="3 700" name="size" type="radio" checked><span>S</span></label>
                                 </div>
                                 <div class="size-radio-item">
-                                    <label for="size2"><input id="size2" name="size" type="radio"><span>M</span></label>
+                                    <label for="size2"><input class="input-price" id="size2" data-price="4 000" name="size" type="radio"><span>M</span></label>
                                 </div>
                                 <div class="size-radio-item">
-                                    <label for="size3"><input id="size3" name="size" type="radio"><span>L</span></label>
+                                    <label for="size3"><input class="input-price" id="size3"  data-price="4 500" name="size" type="radio"><span>L</span></label>
                                 </div>
                                 <div class="size-radio-item disable">
-                                    <label for="size4"><input id="size4" disable name="size" type="radio"><span>XL</span></label>
+                                    <label for="size4"><input class="input-price" id="size4" disable data-price="5 500" name="size" type="radio"><span>XL</span></label>
                                 </div>
                                 <div class="size-radio-item disable">
-                                    <label for="size5"><input id="size5" disable name="size" type="radio"><span>XXL</span></label>
+                                    <label for="size5"><input class="input-price" id="size5" disable data-price="7 000" name="size" type="radio"><span>XXL</span></label>
                                 </div>
-                                <a href="#" class="switch-size">
+                                <a href="#test-modal" class="switch-size">
                                 Подобрать<br> оптимальный размер
                             </a>
                             </div>
                         </div>
 
                         <div class="col-product">
-                            <div class="quantity"><input type="number" value="1" min="1" max="6"></div>
+                            <div class="quantity"><input id="col-product" type="number" value="1" min="1" max="6"></div>
                             <button class="btn-order" type="submit"><span>В корзину</span></button>
                         </div>
 
@@ -117,7 +122,7 @@
                         <div class="title">Быстрый заказ</div>
                         <div class="desc">Вы можете на заполнять никаких форм, просто оставьте свой телефон<br> и наш менеджер свяжется с вами</div>
                         <div class="quick-order-box">
-                            <input type="tel" placeholder="+7   ___-___-__-__">
+                            <input type="tel" required placeholder="+7   ___-___-__-__">
                             <button type="submit">Заказать в один клик</button>
                         </div>
 
@@ -240,6 +245,12 @@
                 </div>
             </div>
 
+        </div>
+
+        <div id="test-modal" class="mfp-hide white-popup-block">
+            <h1>Это тестовый попап</h1>
+            <p>Здесь будет какой-то важный текст, много текста, очень много!</p>
+            <p>Ещё даже может быть тут будут картинки или чтоё ещё :)</p>
         </div>
 
         <footer class="footer">

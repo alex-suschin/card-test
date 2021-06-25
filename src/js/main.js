@@ -59,7 +59,70 @@ $(function() {
 
     });
 
+    $('.card-img-small .card-img-small-item').click(function() {
+        $(this).closest('.card-imgs').find('.card-img-big>.card-img-big-item>a>img').attr('src', $(this).find('img').attr('src'));
+        $(this).closest('.card-imgs').find('.card-img-big>.card-img-big-item>a').attr('href', $(this).find('img').attr('src'));
+        $(this).closest('.card-imgs').find('.card-img-small-item').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    function calcPercent() {
+        var oldPrice = $('.old-price span').text();
+        var oldPriceNum = oldPrice.replace(/\s+/g, '');
+
+        var saleVal = $('.card-sale i').text();
+        var saleValNum = saleVal.replace(/\s+/g, '');
+
+        var pricePercent = oldPriceNum * (saleValNum / 100);
+
+        var newPriceText = (oldPriceNum - pricePercent);
+        var newPriceTextN = newPriceText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+        var newPrice = $('.new-price span').text(newPriceTextN);
+
+        var pricePercentN = pricePercent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        $('.save-money b').text(pricePercentN);
+    }
+
+    calcPercent();
+
+    $(document).on('change', '.size-radio-items .input-price', function() {
+        var $target = $(event.target)
+        $(".card-price").find(".old-price span").text($target.data("price"))
+        calcPercent();
+    });
+
+    var oldPriceM = $('.old-price span').text();
+
+    $('#col-product').on('change', function() {
+        var consPrice = oldPriceM;
+        var nowPriceNum = consPrice.replace(/\s+/g, '');
+        var colTotal = nowPriceNum * $(this).val();
+        var colTotalN = colTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        $('.old-price span').text(colTotalN);
+        calcPercent();
+    });
+
+    $('.test-popup-link').magnificPopup({
+        type: 'image'
+    });
+
+    $('.switch-size').magnificPopup({
+        type: 'inline'
+    });
+
+
 });
+
+
+
+function copyId() {
+    var productId = document.getElementById('idProduct');
+    productId.select();
+    productId.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Вы скопировали тект: " + productId.value);
+}
 
 $(window).on('load resize', function() {
 
