@@ -52,13 +52,13 @@
                             <div class="card-sale">-<i>23</i>%</div>
                         </div>
                         <div class="card-info__right">
-                            <div class="code">Код товара: <input id="idProduct" onclick="copyId()" type="text" readonly value="15112"></div>
+                            <div class="code">Код товара: <input id="idProduct" name="art" onclick="copyId()" type="text" readonly value="15112"></div>
                             <div class="availability"><i><img src="img/galka.png" alt=""></i> На складе много</div>
                             <div class="sale-down">Нашли дешевле? <a href="#">Снизим цену!</a></div>
                         </div>
                     </div>
 
-                    <form action="/" class="form-order" method="POST">
+                    <form action="javascript:void(null);" onsubmit="call()" class="form-order" method="POST">
                         <input type="hide" class="hide-input" value="">
                         <div class="card-size">
                             <div class="title">Выберите размер </div>
@@ -86,18 +86,19 @@
 
                         <div class="col-product">
                             <div class="quantity"><input id="col-product" type="number" value="1" min="1" max="6"></div>
-                            <button class="btn-order" type="submit"><span>В корзину</span></button>
+                            <button class="btn-order" value="Send" type="submit"><span>В корзину</span></button>
                         </div>
                         <div action="/" class="form-quick-order" method="POST">
                             <div class="title">Быстрый заказ</div>
                             <div class="desc">Вы можете на заполнять никаких форм, просто оставьте свой телефон<br> и наш менеджер свяжется с вами</div>
                             <div class="quick-order-box">
-                                <input class="phone" type="tel" required placeholder="+7   ___-___-__-__">
+                                <input name="phone" class="phone" type="tel" required placeholder="+7   ___-___-__-__">
                                 <button>Заказать в один клик</button>
                             </div>
 
                         </div>
                     </form>
+                    <div id="results"></div>
 
 
                 </div>
