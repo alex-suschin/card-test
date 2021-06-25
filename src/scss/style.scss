@@ -466,6 +466,7 @@ select {
     padding: 14px 0 16px 12px;
     background-color: #ebebeb;
     border-radius: 25px;
+    margin-bottom: 42px;
 }
 
 .col-product {
@@ -1427,6 +1428,10 @@ screen and (max-height: 300px) {
     position: relative;
 }
 
+input[type=hide] {
+    display: none;
+}
+
 @media all and (max-width: 900px) {
     .mfp-arrow {
         -webkit-transform: scale(0.75);
@@ -1471,7 +1476,7 @@ screen and (max-height: 300px) {
     M O B I L E
 */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1220px) {
     html,
     body {
         min-width: 320px;
@@ -1481,16 +1486,281 @@ screen and (max-height: 300px) {
     a:focus {
         outline: none;
     }
+    .switch-size {
+        font-size: 12px;
+    }
+    .callback {
+        justify-content: space-between;
+        &>div {
+            text-align: right;
+        }
+    }
+    .callback span {
+        font-size: 15px;
+    }
+    .wrapper {
+        padding: 12px 10px 15px 10px;
+    }
 }
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1050px) {
+    .card-imgs {
+        height: 390px;
+        max-width: 290px;
+    }
+    .card-box-top__left {
+        width: 33%;
+    }
+    .card-box-top__right {
+        width: 60%;
+    }
+    .card-img-small-item {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    .card-img-small-item.active {
+        -webkit-box-shadow: 0 0 0 2px #f0b328;
+        box-shadow: 0 0 0 2px #f0b328;
+    }
+    .region span {
+        font-size: 15px;
+    }
+    .card-box {
+        padding: 29px 17px 50px 17px;
+    }
+    .size-radio-items {
+        flex-wrap: wrap;
+    }
+    .switch-size {
+        margin-left: 0;
+    }
+}
 
-@media screen and (max-width: 991px) {}
+@media screen and (max-width: 1050px) {
+    .switch-size {
+        margin-top: 20px;
+        padding: 3px 0 2px 57px;
+    }
+    .region span {
+        font-size: 14px;
+    }
+    .nice-select .current {
+        font-size: 14px;
+    }
+}
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 900px) {
+    .card-box-top,
+    .card-box-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-box-top__left {
+        width: 100%;
+        padding-bottom: 47px;
+        border-bottom: 1px dashed #c1c1c1;
+    }
+    .card-imgs {
+        margin: 0 auto;
+    }
+    .card-box-top__right {
+        width: 100%;
+    }
+    .card-box-bottom__left {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .quick-order-box input {
+        width: 100%;
+    }
+    .switch-size {
+        margin-top: 0;
+    }
+    .card-box-bottom__right {
+        width: 100%;
+    }
+    .callback a.tel {
+        display: block;
+        width: fit-content;
+    }
+    .desc-product-btns a {
+        font-size: 14px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .note {
+        max-width: 100%;
+    }
+}
 
-@media screen and (max-width: 768px) {}
-
-@media screen and (max-width: 575px) {}
-
-// @import 'media';
+@media screen and (max-width: 620px) {
+    .switch-size {
+        margin-top: 20px;
+    }
+    .old-price {
+        font-size: 14px;
+    }
+    .new-price {
+        font-size: 26px;
+    }
+    .save-money {
+        font-size: 16px;
+        span {
+            display: block;
+            margin-left: 0;
+        }
+    }
+    .card-sale {
+        width: 60px;
+        height: 60px;
+    }
+    .card-imgs {
+        display: flex;
+        align-items: flex-end;
+        height: 360px;
+        max-width: 270px;
+    }
+    .card-img-small {
+        top: initial;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .card-img-small-item {
+        margin: 0 7.5px;
+        margin-bottom: 15px;
+    }
+    .card-img-small-item:last-child {
+        margin-bottom: 15px;
+    }
+    .quick-order-box button {
+        position: static;
+        display: block;
+        margin-top: 15px;
+        max-width: 100%;
+    }
+    .quick-order-box {
+        flex-direction: column;
+    }
+    .quick-order-box input {
+        padding: 0 20px;
+    }
+    .form-order {
+        margin-bottom: 0;
+        padding-bottom: 24px;
+        border-bottom: 1px dashed #c1c1c1;
+    }
+    .card-box-top {
+        margin-bottom: 0;
+    }
+    .card-box-bottom {
+        padding-top: 5px;
+    }
+    .desc-product-elems p {
+        font-size: 14px;
+    }
+    .delivery-table-item a,
+    .delivery-table-item span,
+    .delivery-table-item i {
+        font-size: 12px;
+    }
+    .delivery-table-item b {
+        font-size: 12px;
+    }
+    .delivery-table-item a::after {
+        top: 3px;
+    }
+    .note {
+        padding: 20px 15px 25px 15px;
+    }
+    .note span {
+        font-size: 12px;
+    }
+    .note img {
+        margin-right: 7px;
+    }
+    .callback a.tel {
+        font-size: 20px;
+    }
+    .callback {
+        align-items: flex-start;
+    }
+    .callback span {
+        font-size: 14px;
+        width: 36%;
+    }
+    .callback>div {
+        width: 60%;
+        text-align: left;
+    }
+    .callback a.btn-callback {
+        text-align: left;
+        line-height: 0.8;
+    }
+    .desc-product-elems {
+        padding: 23px 0 0 0;
+    }
+    .chars-item span,
+    .chars-item b {
+        font-size: 12px;
+    }
+    .region span {
+        white-space: nowrap;
+    }
+    .nice-select .list {
+        right: initial;
+    }
+    .sale-down a {
+        display: block;
+        width: fit-content;
+    }
+    .card-info__left {
+        position: relative;
+        width: 50%;
+    }
+    .card-sale {
+        position: absolute;
+        top: 49px;
+        left: 46px;
+    }
+    .card-info {
+        margin-bottom: 32px;
+    }
+    .size-radio-item {
+        margin-right: 33px;
+        &:nth-last-child(2) {
+            margin-right: 0;
+        }
+    }
+    .form-quick-order .title {
+        font-size: 14px;
+    }
+    .form-quick-order .desc {
+        font-size: 12px;
+    }
+    .col-product button span {
+        font-size: 18px;
+    }
+    .col-product button {
+        max-width: 135px;
+        height: 40px;
+    }
+    .col-product {
+        padding: 10px 0 10px 8px;
+    }
+    .quantity {
+        max-width: 107px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.25;
+    }
+}

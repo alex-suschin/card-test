@@ -111,6 +111,28 @@ $(function() {
         type: 'inline'
     });
 
+    $('.hide-input').val($('#idProduct').val());
+
+    $('.btn-order').click(function(e) {
+        e.preventDefault();
+        $.ajax({
+            method: "POST",
+            url: "https://www.ru",
+            dataType: "json",
+            data: {
+                "col": $('#col-product').val(),
+                'id': $('.hide-input').val(),
+                'size': $('input[name="size"]:checked').val(),
+                'tel': $('.phone').val()
+            },
+            success: function(data) {
+                console.log(data);
+            },
+            error: function(er) {
+                console.log(er);
+            }
+        });
+    })
 
 });
 
